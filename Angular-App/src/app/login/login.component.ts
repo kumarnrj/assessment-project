@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,Output,EventEmitter} from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 
@@ -13,11 +13,11 @@ export class LoginComponent implements OnInit {
 
   Email:string='';
   Pwd:string='';
-  loginStatus=false;
+  
   url ='http://localhost:8080/api/customer';
 
   res=[];
-  public msg:string='';
+  
   constructor(private http:HttpClient,private router: Router) { }
 
   validatingForm: FormGroup;
@@ -44,10 +44,11 @@ export class LoginComponent implements OnInit {
       for(let i=0;i<response.length;i++){
         
         if(this.Email==response[i].email && this.Pwd==response[i].password){
-          this.loginStatus=true;
+         
           this.router.navigate([('/home')]);
           
         }
+        alert("Enter valid Email or Password");
        
       }
     
@@ -57,5 +58,7 @@ export class LoginComponent implements OnInit {
     
   }
  
+  
+  
 
 }

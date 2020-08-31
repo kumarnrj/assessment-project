@@ -7,16 +7,13 @@ import {RouterLink} from '@angular/router'
 })
 export class HeaderComponent implements OnInit {
 
-  chilMsg="Hello";
-  @Output()  public childEvent = new EventEmitter();
+ loginStatus=false;
   constructor() { }
 
   ngOnInit(): void {
   }
-  
   fireEvent(){
-    this.childEvent.emit(this.chilMsg);
-
+    this.loginStatus=true;
   }
-
+  
 }

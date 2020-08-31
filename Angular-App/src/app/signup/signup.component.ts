@@ -38,6 +38,7 @@ export class SignupComponent implements OnInit {
     this.http.post(this.url,postedData).toPromise().then(data=>{
       console.log("successful");
     })
+    alert("Succusfully Registered");
   
     
     
