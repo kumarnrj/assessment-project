@@ -1,0 +1,30 @@
+$background-dark: #512DA8;
+$background-light: #9575CD;
+
+@mixin zero-margin($pad-up-dn, $pad-left-right) {
+	margin:0px auto;
+	padding: $pad-up-dn $pad-left-right;
+}
+.jumbotron {
+	@include zero-margin(70px,30px);
+	background: $background-light ;
+	color:floralwhite;
+}
+
+body{
+	padding:50px 0px 0px 0px;
+	z-index:0;
+}
+.row-header{
+	margin:70px,0px;
+}
+.footer {
+	background-color: #D1C4E9;
+	margin: 0px auto;
+	padding: 20px 0px;
+
+}
+#loginbtn{
+	align-self: center;
+}
+
